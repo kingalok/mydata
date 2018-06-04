@@ -1,2 +1,6 @@
 git remote add origin https://github.com/kingalok/mydata.git
 git push origin master
+Aloks-MacBook-Air:mygit aloksharma$ git add MRO.py  Tropo1.py  boto-* python1.py sendsms.py test*
+Aloks-MacBook-Air:mygit aloksharma$ git commit -m "Python Scripts added"
+Aloks-MacBook-Air:mygit aloksharma$ git push origin master
+
