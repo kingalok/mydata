@@ -1,0 +1,17 @@
+Why devops ?
+
+Quick Time to market.
+Development, Testing and System admin all should work very quickly.
+As soon as the idea is generated the application o/p should be done quickly.
+
+All the teams try to deliver the application ( Architect, developers, QA, Proeject mgt, Business analyst, Security, system owners, etc.. )
+
+Complex application, Developers/Testers/Admins are fighting.
+Slow to market
+Waste of knowledge
+
+Example: New Mobile purchased, 1st day working, 2nd day it stops working.
+We call to customer care the dev/test team is figting and will inform you ?
+Custoer will run away....
+
+
