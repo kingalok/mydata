@@ -1,0 +1,52 @@
+  476  easy_install docker
+  480  docker --version
+  481  which docker
+  487  brew cask install docker
+  488  docker images
+  491  ps -ef | grep docker
+  495  ps -ef | grep docker
+  499  cd mygit/devops/docker/
+  510  docker network
+  511  docker network ls
+  512  docker ps
+  513  docker images
+  514  docker start httpd
+  515  docker ps -a
+  516  docker network ls
+  517  docker network inspect bridge
+  518  docker network ls
+  519  docker network inspect bridge
+  520  docker ps -a
+  521  docker start myjenkins:1.0
+  522  docker start  537c44403303
+  523  docker network ls
+  524  docker network inspect bridge
+  528  docker network inspect bridge
+  529  docker network ls
+  530  docker network inspect host
+  531  docker network inspect none
+  532  docker network ls
+  533  docker network create -d bridge --subnet 10.10.10.0/24  kingalok-bridge
+  534  docker network ls
+  535  docker network inspect kingalok-bridge
+  536  docker ps
+  537  docker stop 537c44403303
+  538  docker images
+  539  docker run -it --name c1 --network kingalok-bridge ubuntu /bin/bash
+  540  docker network inspect kingalok-bridge
+  541  docker run -it --name c2 --network kingalok-bridge ubuntu /bin/bash
+  542  docker network ls
+  543  docker network inspect kingalok-bridge
+  544  docker ps
+  545  docker exec -it 88d5f6418c9b /bin/bash
+  546  docker ps
+  547  docker stats --all
+  548  docker ps
+  549  docker update --help
+  550  docker run --help
+  590  docker info
+  591  docker ps
+  592  docker images
+  600  cd docker/
+  603  history  | grep docker
+  604  history  | grep docker >> docker_commands.txt
