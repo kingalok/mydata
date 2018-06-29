@@ -1,0 +1,28 @@
+{
+ "builder": [
+	{
+  "type": "amazon-ebs",
+  "access_key": "asdfdfdsfasd",
+  "secret_key": "3bW6+P9DCBdUasdfdfasdfdsZ9mkzuoVUrWBBsF8Wu6ARoxk5xTh",
+  "region": "us-west-2-",
+  "source_ami": "ami-fce3c696",
+  "instance_type": "t2.micro",
+  "ssh_username": "ubuntu",
+  "ami_name": "packer-quick-start {{timestamp}}",
+  "tags": {
+    "OS_Version": "Ubuntu",
+    "Release": "Latest",
+    "Base_AMI_Name": "{{ .SourceAMIName }}",
+    "Extra": "{{ .SourceAMITags.TagName }}"
+  }
+}	
+	
+
+]
+
+
+
+
+}
+
+
