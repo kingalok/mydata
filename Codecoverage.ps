@@ -1,0 +1,28 @@
+param (
+    [string]$TestPath = "Tests\YourTests.Tests.ps1",
+    [string]$ScriptUnderTest = "YourScript.ps1"
+)
+
+# Run Pester with code coverage
+$pesterResult = Invoke-Pester -Script $TestPath -CodeCoverage $ScriptUnderTest -PassThru
+
+# Get AST of script
+$scriptAst = [System.Management.Automation.Language.Parser]::ParseFile($ScriptUnderTest, [ref]$null, [ref]$null)
+
+# Get all script lines
+$scriptLines = Get-Content $ScriptUnderTest
+
+# Extract covered line numbers
+$coveredLines = $pesterResult.CodeCoverage.CommandsExecuted
+
+# Extract all executable lines (commands analyzed)
+$allLines = $pesterResult.CodeCoverage.CommandsAnalyzed
+
+# Find uncovered lines
+$uncovered = $allLines | Where-Object { $_ -notin $coveredLines }
+
+Write-Host "`nUncovered Lines in $ScriptUnderTest:`n" -ForegroundColor Cyan
+foreach ($lineNum in $uncovered | Sort-Object) {
+    $code = $scriptLines[$lineNum - 1].Trim()
+    Write-Host "Line $lineNum: $code" -ForegroundColor Yellow
+}
